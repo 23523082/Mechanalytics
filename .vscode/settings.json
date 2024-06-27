@@ -1,0 +1,17 @@
+{
+    "java.project.sourcePaths": [
+        "src"
+    ],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "c:\\Users\\Etta Lunetta\\Desktop\\tool for college\\FDA PROJECT\\lib\\javafx-swt.jar",
+        "c:\\Users\\Etta Lunetta\\Desktop\\tool for college\\FDA PROJECT\\lib\\javafx.media.jar",
+        "c:\\Users\\Etta Lunetta\\Desktop\\tool for college\\FDA PROJECT\\lib\\javafx.graphics.jar",
+        "c:\\Users\\Etta Lunetta\\Desktop\\tool for college\\FDA PROJECT\\lib\\javafx.web.jar",
+        "c:\\Users\\Etta Lunetta\\Desktop\\tool for college\\FDA PROJECT\\lib\\xstream-1.4.12.jar",
+        "c:\\Users\\Etta Lunetta\\Desktop\\tool for college\\FDA PROJECT\\lib\\javafx.base.jar",
+        "c:\\Users\\Etta Lunetta\\Desktop\\tool for college\\FDA PROJECT\\lib\\javafx.controls.jar",
+        "c:\\Users\\Etta Lunetta\\Desktop\\tool for college\\FDA PROJECT\\lib\\javafx.fxml.jar",
+        "c:\\Users\\Etta Lunetta\\Desktop\\tool for college\\FDA PROJECT\\lib\\javafx.swing.jar"
+    ]
+}

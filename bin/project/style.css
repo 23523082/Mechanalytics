@@ -1,0 +1,56 @@
+.root {
+  -fx-background-color: #ffffff;
+}
+
+.side_ankerpane {
+  -fx-background-color: #545b68;
+  -fx-border-width: 2px 2px 2px 2px;
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-style: solid;
+}
+
+.inner_pane {
+  -fx-background-color: #d4d4d4;
+  -fx-border-width: 2px 2px 2px 2px;
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-style: solid;
+  -fx-border-color: #808080;
+}
+
+.most_inner_pane {
+  -fx-background-color: #545b68;
+  -fx-border-width: 2px 2px 2px 2px;
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-style: solid;
+  -fx-border-color: #808080;
+}
+
+.nav_btn {
+  -fx-background-shadow: 4px 4px 4px #000000;
+  -fx-background-color: #d4d4d4;
+  -fx-border-width: 2px 2px 2px 2px;
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-style: solid;
+  -fx-border-color: #545b68;
+}
+
+.white_bg {
+  -fx-background-color: #ffffff;
+  -fx-border-width: 2px 2px 2px 2px;
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-style: solid;
+  -fx-border-color: #545b68;
+}
+
+.shadow {
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 50, 0, 10, 0);
+}
+
+.shadow_2 {
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 20, 0, 0, 0);
+}

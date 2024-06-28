@@ -19,7 +19,7 @@ public class ControllerScene1 implements Initializable {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Scene2.fxml"));
             Pane page = loader.load();
-            ControllerScene2 controller = loader.getController();
+            FXMLMenuController controller = loader.getController();
             Machine machine = new Machine("FGK-123", "Decent", 75, "2004/12/2");
             controller.setMachine(machine);
 

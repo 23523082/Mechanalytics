@@ -5,6 +5,7 @@ public class Machine {
     private String healthStatus;
     private int temperature;
     private String age;
+    
 
     public Machine(String machineName, String healthStatus, int temperature, String age) {
         this.machineName = machineName;
@@ -43,5 +44,8 @@ public class Machine {
 
     public void setAge(String age) {
         this.age = age;
+    }
+    public void setMachine( Machine machine) {
+        
     }
 }

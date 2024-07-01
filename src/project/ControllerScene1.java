@@ -6,26 +6,35 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane; 
 import javafx.scene.layout.Pane;
 
 public class ControllerScene1 implements Initializable {
 
+    private Machine machine;
+
     @FXML
-    private AnchorPane mainPane; 
+    private AnchorPane mainPane;
+
+    @FXML
+    private Label Name;
+    @FXML
+    private Label Status;
+    @FXML
+    private Label Age;
+    @FXML
+    private Label temperature;
+
 
     @FXML
     private void login(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Scene2.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSMenu.fxml"));
             Pane page = loader.load();
             FXMLMenuController controller = loader.getController();
-            Machine machine = new Machine("FGK-123", "Decent", 75, "2004/12/2");
-            controller.setMachine(machine);
-
             
-            mainPane.getChildren().clear(); 
-            mainPane.getChildren().add(page); 
+            
         } catch (Exception e) {
             e.printStackTrace();
         }

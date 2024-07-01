@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -125,25 +129,67 @@
       </VBox>
       <Pane prefHeight="720.0" prefWidth="919.0">
          <children>
-            <Pane layoutX="17.0" layoutY="338.0" prefHeight="359.0" prefWidth="891.0">
+            <Pane layoutX="14.0" layoutY="518.0" prefHeight="188.0" prefWidth="351.0">
                <styleClass>
                   <String fx:value="white_bg" />
                   <String fx:value="shadow" />
                </styleClass>
-            </Pane>
-            <Pane layoutX="370.0" layoutY="87.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@style.css">
                <children>
-                  <ImageView fitHeight="216.0" fitWidth="223.0" layoutX="7.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imageMenu/Desain%20tanpa%20judul%20(2).png" />
-                     </image>
-                  </ImageView>
-                  <Text layoutX="1.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome UserName">
+                  <Button layoutX="30.0" layoutY="135.0" mnemonicParsing="false" text="Show Potential Malfunction">
                      <font>
-                        <Font name="Calibri" size="24.0" />
+                        <Font size="21.0" />
                      </font>
-                  </Text>
-               </children></Pane>
+                  </Button>
+                  <Button layoutX="94.0" layoutY="14.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="155.0" text="Change Chart">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="65.0" layoutY="75.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="214.0" text="Change Machine">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <LineChart layoutX="17.0" layoutY="24.0" prefHeight="314.0" prefWidth="401.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <Text layoutX="96.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Average Perfomance/2 month" wrappingWidth="275.13671875">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Label fx:id="ModuleName" alignment="CENTER" layoutX="575.0" layoutY="24.0" prefHeight="38.0" prefWidth="112.0" text="Label">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="name" alignment="CENTER" layoutX="40.0" layoutY="341.0" prefHeight="38.0" prefWidth="343.0" text="Label">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="status" alignment="CENTER" layoutX="40.0" layoutY="379.0" prefHeight="38.0" prefWidth="343.0" text="Label">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="temperature" alignment="CENTER" layoutX="40.0" layoutY="417.0" prefHeight="38.0" prefWidth="343.0" text="Label">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="age" alignment="CENTER" layoutX="40.0" layoutY="455.0" prefHeight="38.0" prefWidth="343.0" text="Label">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>

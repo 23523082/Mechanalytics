@@ -28,15 +28,16 @@
   -fx-border-color: #808080;
 }
 
-.nav_btn {
-  -fx-background-shadow: 4px 4px 4px #000000;
+/* .nav_btn {
+  -fx-background-shadow: 4px 4px 4px 0px #000000,
+                         5px 5px 10px 0px #888888; 
   -fx-background-color: #d4d4d4;
   -fx-border-width: 2px 2px 2px 2px;
   -fx-border-radius: 20px;
   -fx-background-radius: 20px;
   -fx-border-style: solid;
   -fx-border-color: #545b68;
-}
+} */
 
 .white_bg {
   -fx-background-color: #ffffff;

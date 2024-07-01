@@ -7,10 +7,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 
 
 public class FXMLControllerHealth implements Initializable{
+    @FXML
+    private HBox Healthpane;
 
     @FXML
     private Label name;
@@ -40,34 +43,9 @@ public class FXMLControllerHealth implements Initializable{
         }
     }
 
-      @FXML
-    private void login(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Scene2.fxml"));
-            Pane page = loader.load();
-            FXMLMenuController controller = loader.getController();
-            
-            
-            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
     
-    @FXML
-    private void handleButtonAction2(ActionEvent event) {
-        System.out.println("button 2 clicked");
-    }
-
-    @FXML
-    private void handleButtonAction3(ActionEvent event) {
-        System.out.println("button 3 clicked");
-    }
-
-    @FXML
-    private void handleButtonAction4(ActionEvent event) {
-        System.out.println("button 4 clicked");
-    }
+  
+    
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

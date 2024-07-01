@@ -38,7 +38,7 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="165.0" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css">
                      <children>
-                        <Button fx:id="btn_Menu1" mnemonicParsing="false" onAction="#handleButtonAction1" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Machine Health">
+                        <Button fx:id="MachineHealth" mnemonicParsing="false" onAction="#MachineHealth" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Machine Health">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>

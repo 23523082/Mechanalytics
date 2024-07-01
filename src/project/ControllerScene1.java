@@ -17,14 +17,7 @@ public class ControllerScene1 implements Initializable {
     @FXML
     private AnchorPane mainPane;
 
-    @FXML
-    private Label Name;
-    @FXML
-    private Label Status;
-    @FXML
-    private Label Age;
-    @FXML
-    private Label temperature;
+    
 
 
     @FXML
@@ -33,8 +26,10 @@ public class ControllerScene1 implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSMenu.fxml"));
             Pane page = loader.load();
             FXMLMenuController controller = loader.getController();
-            
-            
+            mainPane.getChildren().clear(); 
+            mainPane.getChildren().add(page);
+            Machine machine = new Machine("FGK-123", "Decent", 75, "2004/12/2");
+             
         } catch (Exception e) {
             e.printStackTrace();
         }

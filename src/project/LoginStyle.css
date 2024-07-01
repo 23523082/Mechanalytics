@@ -1,0 +1,24 @@
+.side_ankerPane {
+  -fx-background-color: #8f95a0;
+}
+
+.shadow_bg {
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 30, 0, 10, 0);
+}
+
+.text_field {
+  -fx-background-color: transparent;
+  -fx-border-color: transparent transparent grey transparent;
+  -fx-border-width: 0 0 2px 0;
+}
+
+.button {
+  -fx-background-color: #545b68;
+  -fx-text-fill: white;
+  -fx-background-radius: 30;
+  -fx-border-radius: 30;
+}
+
+.hyperlink {
+  -fx-text-fill: #545b68;
+}

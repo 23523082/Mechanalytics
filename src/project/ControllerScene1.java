@@ -7,31 +7,43 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane; 
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
 
 public class ControllerScene1 implements Initializable {
 
-    private Machine machine;
-
-    @FXML
+     @FXML
     private AnchorPane mainPane;
-
-    
-
+    @FXML
+    private TextField usernameField; // Assuming the FXML ID is usernameField
+    @FXML
+    private PasswordField passwordField; // Assuming the FXML ID is passwordField
 
     @FXML
     private void login(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSMenu.fxml"));
-            Pane page = loader.load();
-            FXMLMenuController controller = loader.getController();
-            mainPane.getChildren().clear(); 
-            mainPane.getChildren().add(page);
-            Machine machine = new Machine("FGK-123", "Decent", 75, "2004/12/2");
-             
-        } catch (Exception e) {
-            e.printStackTrace();
+        String username = usernameField.getText();
+        String password = passwordField.getText();
+
+        if ("UserName".equals(username) && "RCTIOK".equals(password)) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSMenu.fxml"));
+                Pane page = loader.load();
+                Scene scene = new Scene(page);
+                Stage stage = (Stage) mainPane.getScene().getWindow();
+                stage.setScene(scene);
+                stage.sizeToScene();
+                stage.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            // Here you can handle the incorrect credentials case
+            // For example, show an error message to the user
+            System.out.println("Incorrect username or password.");
         }
     }
 

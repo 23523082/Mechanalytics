@@ -5,8 +5,8 @@
 .side_ankerpane {
   -fx-background-color: #545b68;
   -fx-border-width: 2px 2px 2px 2px;
-  -fx-border-radius: 20px;
-  -fx-background-radius: 20px;
+  -fx-border-radius: 5px;
+  -fx-background-radius: 5px;
   -fx-border-style: solid;
 }
 
@@ -28,16 +28,32 @@
   -fx-border-color: #808080;
 }
 
-/* .nav_btn {
-  -fx-background-shadow: 4px 4px 4px 0px #000000,
-                         5px 5px 10px 0px #888888; 
+.nav_btn {
   -fx-background-color: #d4d4d4;
-  -fx-border-width: 2px 2px 2px 2px;
+  -fx-border-width: 2px;
   -fx-border-radius: 20px;
   -fx-background-radius: 20px;
   -fx-border-style: solid;
   -fx-border-color: #545b68;
-} */
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);
+  transition: all 0.3s ease;
+}
+
+.nav_btn:hover {
+  -fx-background-color: #eaeaea; /* Lighter shade when hovered */
+}
+
+.nav_btn:pressed {
+  -fx-background-color: #cacaca; /* Even darker to simulate a press */
+  -fx-effect: dropshadow(
+    three-pass-box,
+    rgba(0, 0, 0, 0.3),
+    5,
+    0,
+    0,
+    0
+  ); /* Smaller shadow to simulate depth */
+}
 
 .white_bg {
   -fx-background-color: #ffffff;

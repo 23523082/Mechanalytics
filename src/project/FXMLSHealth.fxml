@@ -101,11 +101,11 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="550.0" prefHeight="80.0" prefWidth="240.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Subscription">
+                        <Button fx:id="btn_Menu4" mnemonicParsing="false" onAction="#handleButtonAction4" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="  History">
                            <graphic>
-                              <ImageView fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="54.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@imageMenu/2.png" />
+                                    <Image url="@imageMenu/mechanalytics.png" />
                                  </image>
                               </ImageView>
                            </graphic>

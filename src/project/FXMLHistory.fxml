@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.LineChart?>
-<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,11 +15,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="Healthpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLControllerHealth">
+<HBox fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLMenuController">
    <children>
       <VBox prefHeight="720.0" prefWidth="360.0">
          <children>
-            <AnchorPane fx:id="side_ankerpane" prefHeight="725.0" prefWidth="344.0" stylesheets="@style.css">
+            <AnchorPane fx:id="side_ankerpane" prefHeight="777.0" prefWidth="360.0" stylesheets="@style.css">
                <children>
                   <Pane fx:id="inner_pane" layoutX="14.0" layoutY="18.0" prefHeight="106.0" prefWidth="330.0" stylesheets="@style.css">
                      <children>
@@ -41,7 +42,7 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="165.0" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Machine Health">
+                        <Button fx:id="MachineHealth" mnemonicParsing="false" onAction="#MachineHealth" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Machine Health">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -61,7 +62,7 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="299.0" prefHeight="80.0" prefWidth="240.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Notification">
+                        <Button fx:id="btn_Menu2" mnemonicParsing="false" onAction="#handleButtonAction2" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="  Notification">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -81,7 +82,7 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="428.0" prefHeight="80.0" prefWidth="240.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Guidance">
+                        <Button fx:id="btn_Menu3" mnemonicParsing="false" onAction="#handleButtonAction3" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="  Guidance">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -123,63 +124,49 @@
                <styleClass>
                   <String fx:value="side_ankerpane" />
                   <String fx:value="shadow" />
-               </styleClass></AnchorPane>
+               </styleClass>
+            </AnchorPane>
          </children>
       </VBox>
-      <Pane prefHeight="720.0" prefWidth="919.0">
+      <VBox prefHeight="720.0" prefWidth="920.0">
          <children>
-            <Pane layoutY="518.0" prefHeight="188.0" prefWidth="351.0">
-               <styleClass>
-                  <String fx:value="white_bg" />
-                  <String fx:value="shadow" />
-               </styleClass>
+            <AnchorPane fx:id="TheHistory_Pane" prefHeight="420.0" prefWidth="1125.0" styleClass="top_pane" stylesheets="@Historystyle.css">
                <children>
-                  <Button layoutX="82.0" layoutY="94.0" mnemonicParsing="false" text="Show Potential Malfunction">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="94.0" layoutY="33.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="155.0" text="Change Chart">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Button>
+                  <TableView fx:id="History_TableView" layoutX="10.0" layoutY="48.0" prefHeight="342.0" prefWidth="902.0" stylesheets="@Historystyle.css">
+                    <columns>
+                      <TableColumn fx:id="date_Machine_History" prefWidth="132.800048828125" text="Date" />
+                      <TableColumn fx:id="UserName_Machine_History" prefWidth="143.73336791992188" text="User Name" />
+                        <TableColumn fx:id="MachineName_Machine_History" prefWidth="104.79998779296875" text="Machine" />
+                        <TableColumn fx:id="MachineBrand_Machine_History" prefWidth="125.60003662109375" text="Machine Brand" />
+                        <TableColumn fx:id="IssueType_Machine_History" minWidth="0.0" prefWidth="106.4000244140625" text="Issue Type" />
+                        <TableColumn fx:id="Description_Machine_History" minWidth="0.0" prefWidth="200.0" text="Description" />
+                        <TableColumn fx:id="Status_Machine_History" minWidth="0.0" prefWidth="85.59995117187498" text="Status" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="history_search" layoutX="51.0" layoutY="14.0" prefHeight="26.0" prefWidth="314.0" promptText="search" />
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="26.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imageMenu/search.png" />
+                     </image>
+                  </ImageView>
                </children>
-            </Pane>
-            <LineChart fx:id="lineChart" layoutX="17.0" layoutY="24.0" prefHeight="314.0" prefWidth="401.0">
-              <xAxis>
-                <CategoryAxis side="BOTTOM" fx:id="xAxis" />
-              </xAxis>
-              <yAxis>
-                <NumberAxis fx:id="yAxis" side="LEFT" />
-              </yAxis>
-            </LineChart>
-            <Label fx:id="ModuleName" alignment="CENTER" layoutX="424.0" layoutY="5.0" prefHeight="38.0" prefWidth="112.0" text="Label">
-               <font>
-                  <Font size="26.0" />
-               </font>
-            </Label>
-            <Label fx:id="name" alignment="CENTER" layoutX="40.0" layoutY="348.0" prefHeight="38.0" prefWidth="343.0" text="Label">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-            <Label fx:id="status" alignment="CENTER" layoutX="40.0" layoutY="379.0" prefHeight="38.0" prefWidth="343.0" text="Label">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-            <Label fx:id="temperature" alignment="CENTER" layoutX="40.0" layoutY="417.0" prefHeight="38.0" prefWidth="343.0" text="Label">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-            <Label fx:id="age" alignment="CENTER" layoutX="40.0" layoutY="455.0" prefHeight="38.0" prefWidth="343.0" text="Label">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-         </children>
-      </Pane>
+            </AnchorPane>
+            <AnchorPane prefHeight="314.0" prefWidth="920.0" styleClass="bottom_pane" stylesheets="@Historystyle.css">
+               <children>
+                  <TextField fx:id="InsertDescription_IssueMachine" alignment="TOP_LEFT" layoutX="35.0" layoutY="20.0" prefHeight="214.0" prefWidth="661.0" promptText="please insert description issue on machine">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <Button fx:id="AddNewNote_IssueMachine" layoutX="720.0" layoutY="20.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="180.0" text="Add " />
+                  <Button fx:id="DeleteNote_IssueMachine" layoutX="720.0" layoutY="110.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="180.0" text="delete" />
+                  <Button fx:id="SubmitNote_IssueMachine" layoutX="720.0" layoutY="200.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="180.0" text="submit" />
+                  <ChoiceBox layoutX="545.0" layoutY="250.0" prefWidth="150.0" />
+                  <TextField fx:id="addUserName_IssueMachine" layoutX="35.0" layoutY="250.0" promptText="address" text="User Name" />
+                  <TextField fx:id="addMachineBrand_IssueMachine" layoutX="205.0" layoutY="250.0" promptText="number" text="Machine Brand" />
+                  <ComboBox fx:id="ChooseMachine_IssueMachine" layoutX="375.0" layoutY="250.0" prefWidth="150.0" promptText="Choose machine" />
+                  <ComboBox fx:id="addIssueType_IssueMachine" layoutX="545.0" layoutY="250.0" prefWidth="150.0" promptText="issue Type" />
+               </children>
+            </AnchorPane>
+         </children></VBox>
    </children>
 </HBox>

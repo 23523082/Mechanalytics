@@ -13,10 +13,28 @@
 }
 
 .button {
-  -fx-background-color: #545b68;
-  -fx-text-fill: white;
+  -fx-background-color: #5d6068;
+  -fx-text-fill: rgb(255, 255, 255);
   -fx-background-radius: 30;
   -fx-border-radius: 30;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  -fx-background-color: #c0c0c0; /* Lighter shade when hovered */
+}
+
+.button:pressed {
+  -fx-background-color: #4e4e4e; /* Even darker to simulate a press */
+  -fx-effect: dropshadow(
+    three-pass-box,
+    rgba(0, 0, 0, 0.3),
+    5,
+    0,
+    0,
+    0
+  ); /* Smaller shadow to simulate depth */
 }
 
 .hyperlink {

@@ -10,7 +10,7 @@ import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-public class FXMLMenuController implements Initializable {
+public class FXMLControllerHistory implements Initializable {
     @FXML
     private HBox mainPane;
     @FXML

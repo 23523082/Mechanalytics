@@ -1,30 +1,36 @@
 {
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "java",
-      "name": "SceneRunner",
-      "request": "launch",
-      "mainClass": "project.SceneRunner",
-      "projectName": "Mechanalytics_58394402",
-      "vmArgs": "--module-path 'C:/Users/A C E R/Documents/javafx-sdk-21.0.3/lib' --add-modules javafx.controls,javafx.fxml"
-    },
-    {
-      "type": "java",
-      "name": "Current File",
-      "request": "launch",
-      "mainClass": "${file}"
-    },
-    {
-      "type": "java",
-      "name": "SceneRunner",
-      "request": "launch",
-      "mainClass": "project.SceneRunner",
-      "projectName": "FDA PROJECT_f198300b",
-      "vmArgs": "--module-path 'C:/Users/A C E R/Documents/javafx-sdk-21.0.3/lib' --add-modules javafx.controls,javafx.fxml"
-    }
-  ]
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "DataMachine",
+            "request": "launch",
+            "mainClass": "project.DataMachine",
+            "projectName": "FDA PROJECT_f198300b"
+        },
+        {
+            "type": "java",
+            "name": "SceneRunner",
+            "request": "launch",
+            "mainClass": "project.SceneRunner",
+            "projectName": "FDA PROJECT_f198300b",
+            "vmArgs": "--module-path  \"C:/Users/Etta Lunetta/Documents/javafx/javafx-sdk-17.0.11/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "averagePerfomance",
+            "request": "launch",
+            "mainClass": "project.averagePerfomance",
+            "projectName": "FDA PROJECT_f198300b"
+        }
+    ]
 }

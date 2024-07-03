@@ -1,13 +1,13 @@
 package project;
 
 public class Machine {
-    private String machineName;
-    private String healthStatus;
-    private int temperature;
-    private String age;
+    String machineName;
+    String healthStatus;
+    String temperature;
+    String age;
     
 
-    public Machine(String machineName, String healthStatus, int temperature, String age) {
+    public Machine(String machineName, String healthStatus, String temperature, String age) {
         this.machineName = machineName;
         this.healthStatus = healthStatus;
         this.temperature = temperature;
@@ -30,11 +30,11 @@ public class Machine {
         this.healthStatus = healthStatus;
     }
 
-    public int getTemperature() {
+    public String getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(int temperature) {
+    public void setTemperature(String temperature) {
         this.temperature = temperature;
     }
 
@@ -45,7 +45,16 @@ public class Machine {
     public void setAge(String age) {
         this.age = age;
     }
-    public void setMachine( Machine machine) {
-        
+
+    @Override
+    public String toString() {
+        return "Machine{" +
+                "machineName='" + machineName + '\'' +
+                ", status='" + healthStatus + '\'' +
+                ", temperature='" + temperature + '\'' +
+                ", age='" + age + '\'' +
+                '}';
     }
+    
+       
 }

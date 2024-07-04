@@ -17,11 +17,11 @@ public class FXMLControllerHistory implements Initializable {
     private void MachineHealth(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSHealth.fxml"));
-            Pane healthPane = loader.load(); // Load the health pane
+            HBox healthpane = loader.load(); // Load the health pane
             FXMLControllerHealth healthController = loader.getController(); // Get its controller
             // Replace the content of mainPane with the health pane
             mainPane.getChildren().clear();
-            mainPane.getChildren().add(healthPane);
+            mainPane.getChildren().add(healthpane);
             // Optionally pass data to the health controller
             // healthController.setData(someData);
         } catch (IOException e) {

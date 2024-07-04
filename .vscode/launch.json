@@ -15,22 +15,15 @@
             "name": "DataMachine",
             "request": "launch",
             "mainClass": "project.DataMachine",
-            "projectName": "FDA PROJECT_f198300b"
+            "projectName": "Mechanalytics-1_5c379cdc"
         },
         {
             "type": "java",
             "name": "SceneRunner",
             "request": "launch",
             "mainClass": "project.SceneRunner",
-            "projectName": "FDA PROJECT_f198300b",
-            "vmArgs": "--module-path  \"C:/Users/Etta Lunetta/Documents/javafx/javafx-sdk-17.0.11/lib\" --add-modules javafx.controls,javafx.fxml"
-        },
-        {
-            "type": "java",
-            "name": "averagePerfomance",
-            "request": "launch",
-            "mainClass": "project.averagePerfomance",
-            "projectName": "FDA PROJECT_f198300b"
+            "projectName": "Mechanalytics-1_5c379cdc",
+            "vmArgs": "--module-path  'C:/Users/Etta Lunetta/Documents/javafx/javafx-sdk-17.0.11/lib' --add-modules javafx.controls,javafx.fxml --add-opens=java.base/java.lang.reflect=ALL-UNNAMED"
         }
     ]
 }

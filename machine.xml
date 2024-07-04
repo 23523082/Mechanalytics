@@ -1,6 +1,6 @@
 <machine>
   <machineName>Lathe</machineName>
   <healthStatus>Operational</healthStatus>
-  <temperature>75°C</temperature>
+  <temperature>75 Celcius</temperature>
   <age>5 years</age>
 </machine>

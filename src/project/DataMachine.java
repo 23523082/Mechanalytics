@@ -1,7 +1,7 @@
 package project;
 
 import com.thoughtworks.xstream.XStream;
-
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -14,22 +14,18 @@ public class DataMachine {
         return xStream.toXML(machine);
     }
 
-    public static void main(String[] args) {
-        // Example machine data
-        Machine machine = new Machine("Lathe", "Operational", "75°C", "5 years");
-
-        // Serialize to XML
-        String xml = serializeMachineToXML(machine);
-        System.out.println("Serialized XML:\n" + xml);
-
-        // Optional: Write XML to file
-        writeXMLToFile(xml, "machine.xml");
-
-        // Optional: Load XML from file and deserialize
-        Machine loadedMachine = loadMachineFromXML("machine.xml");
-        if (loadedMachine != null) {
-            System.out.println("Deserialized Machine: " + loadedMachine.getMachineName());
+    public static String xml2String(String filePath) {
+        StringBuilder stringBuilder = new StringBuilder();
+        try (FileInputStream inputDoc = new FileInputStream(filePath)) {
+            int content;
+            while ((content = inputDoc.read()) != -1) {
+                stringBuilder.append((char) content);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "Error reading file: " + e.getMessage();
         }
+        return stringBuilder.toString();
     }
 
     public static void writeXMLToFile(String xml, String filename) {
@@ -50,5 +46,18 @@ public class DataMachine {
             e.printStackTrace();
         }
         return null;
+    }
+
+    // Method to simulate machine data update
+    public static Machine getUpdatedMachineData() {
+        // Simulate updated machine data
+        return new Machine("Lathe", "Operational", "75°C", "5 years");
+    }
+
+    // Method to update XML with new machine data
+    public static void updateMachineData() {
+        Machine updatedMachine = getUpdatedMachineData();
+        String xml = serializeMachineToXML(updatedMachine);
+        writeXMLToFile(xml, "machine.xml");
     }
 }

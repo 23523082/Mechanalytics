@@ -17,7 +17,7 @@ public class FXMLMenuController implements Initializable {
     private void MachineHealth(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSHealth.fxml"));
-            Pane healthPane = loader.load(); // Load the health pane
+            HBox healthPane = loader.load(); // Load the health pane
             FXMLControllerHealth healthController = loader.getController(); // Get its controller
             // Replace the content of mainPane with the health pane
             mainPane.getChildren().clear();

@@ -101,7 +101,7 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="550.0" prefHeight="80.0" prefWidth="240.0">
                      <children>
-                        <Button fx:id="btn_Menu4" mnemonicParsing="false" onAction="#handleButtonAction4" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="  History">
+                        <Button fx:id="btn_Menu4" mnemonicParsing="false" onAction="#history" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="  History">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -128,24 +128,6 @@
       </VBox>
       <Pane prefHeight="720.0" prefWidth="919.0">
          <children>
-            <Pane layoutY="518.0" prefHeight="188.0" prefWidth="351.0">
-               <styleClass>
-                  <String fx:value="white_bg" />
-                  <String fx:value="shadow" />
-               </styleClass>
-               <children>
-                  <Button layoutX="82.0" layoutY="94.0" mnemonicParsing="false" text="Show Potential Malfunction">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="94.0" layoutY="33.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="155.0" text="Change Chart">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Button>
-               </children>
-            </Pane>
             <LineChart fx:id="lineChart" layoutX="17.0" layoutY="24.0" prefHeight="314.0" prefWidth="401.0">
               <xAxis>
                 <CategoryAxis side="BOTTOM" fx:id="xAxis" />
@@ -179,6 +161,16 @@
                   <Font size="23.0" />
                </font>
             </Label>
+            <Button fx:id="CycleChart" layoutX="94.0" layoutY="612.0" mnemonicParsing="false" onAction="#CycleChart" prefHeight="17.0" prefWidth="176.0" text="Change Chart">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Button>
+            <Button layoutX="40.0" layoutY="539.0" mnemonicParsing="false" text="Show Potential Malfunction">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
    </children>

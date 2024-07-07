@@ -7,19 +7,34 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 public class FXMLMenuController implements Initializable {
+    
     @FXML
     private HBox mainPane;
     @FXML
-    private void MachineHealth(ActionEvent event) {
+    private AnchorPane side_ankerpane;
+    @FXML
+    private Pane inner_pane;
+    @FXML
+    private Pane most_inner_pane;
+    @FXML
+    private Button Healthpane;
+    @FXML
+    private Button Notification_btn;
+    @FXML
+    private Button Guide_btn;
+    @FXML
+    private Button History_btn;
+    @FXML
+    private void  moveToMachineHealth(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSHealth.fxml"));
             HBox healthPane = loader.load(); // Load the health pane
-            FXMLControllerHealth healthController = loader.getController(); // Get its controller
-            // Replace the content of mainPane with the health pane
+            FXMLControllerHealth controllerHealth = loader.getController(); // Get its controller
             mainPane.getChildren().clear();
             mainPane.getChildren().add(healthPane);
             // Optionally pass data to the health controller

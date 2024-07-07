@@ -15,7 +15,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.StackedAreaChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -25,7 +24,7 @@ import javafx.scene.layout.Pane;
 
 public class FXMLControllerHealth implements Initializable {
 
-     @FXML
+    @FXML
     private HBox Healthpane;
     @FXML
     private AnchorPane side_ankerpane;
@@ -34,7 +33,11 @@ public class FXMLControllerHealth implements Initializable {
     @FXML
     private Pane most_inner_pane;
     @FXML
-    private Button btn_Menu4;
+    private Button Notification_btn;
+    @FXML
+    private Button Guide_btn;
+    @FXML
+    private Button History_btn;
     @FXML
     private LineChart<String, Number> lineChart;
     @FXML
@@ -57,12 +60,19 @@ public class FXMLControllerHealth implements Initializable {
     private Label modulecurrent;
     @FXML
     private LineChart<String, Number> modulechart;
+    @FXML
+    private CategoryAxis xAxis1;
+    @FXML
+    private NumberAxis yAxis1;
 
-    
+   @FXML
+    void MoveToGuide(ActionEvent event) {
 
+    }
 
     @FXML
-    void history(ActionEvent event) {
+    void MoveToHistory(ActionEvent event) {
+
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLHistory.fxml"));
             HBox historyPane = loader.load(); 
@@ -74,11 +84,15 @@ public class FXMLControllerHealth implements Initializable {
         } catch (IOException e) {
             e.printStackTrace(); 
         }
+
     }
+
     @FXML
-    void handleButtonAction4(ActionEvent event) {
-        // Button action code here
+    void MoveToNotification(ActionEvent event) {
+
     }
+
+
     
 
     @Override

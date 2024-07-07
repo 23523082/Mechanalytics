@@ -41,7 +41,7 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="165.0" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css">
                      <children>
-                        <Button fx:id="MachineHealth" mnemonicParsing="false" onAction="#MachineHealth" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Machine Health">
+                        <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Machine Health">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -81,7 +81,7 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="428.0" prefHeight="80.0" prefWidth="240.0">
                      <children>
-                        <Button fx:id="Guide_btn" mnemonicParsing="false" prefHeight="80.0" onAction="#MoveToGuide" prefWidth="240.0" stylesheets="@style.css" text="Guidance">
+                        <Button fx:id="Guide_btn" mnemonicParsing="false" onAction="#MoveToGuide" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Guidance">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>

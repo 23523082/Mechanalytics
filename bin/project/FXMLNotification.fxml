@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.LineChart?>
-<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,15 +11,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="Healthpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLControllerHealth">
+<HBox fx:id="NotificationPane"  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="722.0" prefWidth="1284.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLControllerNotification">
    <children>
       <VBox prefHeight="720.0" prefWidth="360.0">
          <children>
-            <AnchorPane fx:id="side_ankerpane" prefHeight="725.0" prefWidth="344.0" stylesheets="@style.css">
+            <AnchorPane fx:id="side_ankerpane" prefHeight="740.0" prefWidth="377.0" stylesheets="@style.css">
                <children>
                   <Pane fx:id="inner_pane" layoutX="14.0" layoutY="18.0" prefHeight="106.0" prefWidth="330.0" stylesheets="@style.css">
                      <children>
-                        <ImageView fitHeight="110.0" fitWidth="189.0" layoutX="176.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="110.0" fitWidth="189.0" layoutX="161.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@imageMenu/Desain%20tanpa%20judul.png" />
                            </image>
@@ -41,7 +38,7 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="165.0" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Machine Health">
+                        <Button fx:id="MachineHealth" mnemonicParsing="false" onAction="#MachineHealth" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Machine Health">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -61,7 +58,7 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="299.0" prefHeight="80.0" prefWidth="240.0">
                      <children>
-                        <Button fx:id="Notification_btn" mnemonicParsing="false" onAction="#MoveToNotification" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Notification">
+                        <Button fx:id="Notification_btn" mnemonicParsing="false" onAction="#MoveToNotification" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="  Notification">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -81,7 +78,7 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="428.0" prefHeight="80.0" prefWidth="240.0">
                      <children>
-                        <Button fx:id="Guide_btn" mnemonicParsing="false" onAction="#MoveToGuide" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Guidance">
+                        <Button fx:id="Guide_btn" mnemonicParsing="false" onAction="#MoveToGuide" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="  Guidance">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -126,64 +123,25 @@
                </styleClass></AnchorPane>
          </children>
       </VBox>
-      <Pane prefHeight="720.0" prefWidth="919.0">
+      <Pane prefHeight="722.0" prefWidth="926.0">
          <children>
-            <LineChart fx:id="lineChart" layoutX="17.0" layoutY="24.0" prefHeight="314.0" prefWidth="401.0">
-              <xAxis>
-                <CategoryAxis side="BOTTOM" fx:id="xAxis" />
-              </xAxis>
-              <yAxis>
-                <NumberAxis fx:id="yAxis" side="LEFT" />
-              </yAxis>
-            </LineChart>
-            <Label fx:id="name" alignment="CENTER" layoutX="40.0" layoutY="348.0" prefHeight="38.0" prefWidth="343.0" text="Label">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-            <Label fx:id="status" alignment="CENTER" layoutX="40.0" layoutY="379.0" prefHeight="38.0" prefWidth="343.0" text="Label">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-            <Label fx:id="temperature" alignment="CENTER" layoutX="40.0" layoutY="417.0" prefHeight="38.0" prefWidth="343.0" text="Label">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-            <Label fx:id="age" alignment="CENTER" layoutX="40.0" layoutY="455.0" prefHeight="38.0" prefWidth="343.0" text="Label">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-            <Button layoutX="40.0" layoutY="539.0" mnemonicParsing="false" text="Show Potential Malfunction">
-               <font>
-                  <Font size="21.0" />
-               </font>
-            </Button>
-            <Label fx:id="moduleseries" alignment="CENTER" layoutX="478.0" layoutY="367.0" prefHeight="38.0" prefWidth="343.0" text="Label">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-            <Label fx:id="modulehealth" alignment="CENTER" layoutX="478.0" layoutY="405.0" prefHeight="38.0" prefWidth="343.0" text="Label">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-            <Label fx:id="modulecurrent" alignment="CENTER" layoutX="478.0" layoutY="455.0" prefHeight="38.0" prefWidth="343.0" text="label">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-            <LineChart fx:id="modulechart" layoutX="478.0" layoutY="24.0" prefHeight="314.0" prefWidth="401.0">
-               <xAxis>
-                  <CategoryAxis side="BOTTOM" fx:id="xAxis1" />
-               </xAxis>
-               <yAxis>
-                  <NumberAxis fx:id="yAxis1" side="LEFT" />
-               </yAxis>
-            </LineChart>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="360.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/Mechanalytics-master/src/project/imageMenu/Desain%20tanpa%20judul%20(2).png" />
+               </image>
+            </ImageView>
+            <ListView layoutY="216.0" prefHeight="43.0" prefWidth="920.0" />
+            <ListView layoutY="254.0" prefHeight="43.0" prefWidth="920.0" />
+            <ListView layoutX="1.0" layoutY="297.0" prefHeight="43.0" prefWidth="920.0" />
+            <ListView layoutX="1.0" layoutY="340.0" prefHeight="43.0" prefWidth="920.0" />
+            <ListView layoutX="1.0" layoutY="383.0" prefHeight="43.0" prefWidth="920.0" />
+            <ListView layoutX="1.0" layoutY="425.0" prefHeight="43.0" prefWidth="920.0" />
+            <ListView layoutX="1.0" layoutY="468.0" prefHeight="43.0" prefWidth="920.0" />
+            <ListView layoutX="1.0" layoutY="510.0" prefHeight="43.0" prefWidth="920.0" />
+            <ListView layoutX="1.0" layoutY="553.0" prefHeight="43.0" prefWidth="920.0" />
+            <ListView layoutX="1.0" layoutY="597.0" prefHeight="43.0" prefWidth="920.0" />
+            <ListView layoutX="1.0" layoutY="636.0" prefHeight="43.0" prefWidth="920.0" />
+            <ListView layoutY="680.0" prefHeight="43.0" prefWidth="920.0" />
          </children>
       </Pane>
    </children>

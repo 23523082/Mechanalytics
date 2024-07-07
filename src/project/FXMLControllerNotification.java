@@ -17,7 +17,7 @@ public class FXMLControllerNotification implements Initializable {
     private HBox mainPane;
 
     @FXML
-    private VBox Healthpane;
+    private HBox Healthpane;
 
     @FXML
     private VBox historyPane;
@@ -25,11 +25,13 @@ public class FXMLControllerNotification implements Initializable {
     @FXML
     private VBox notificationPane;
 
+    
+
     @FXML
     private void MachineHealth(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSHealth.fxml"));
-            Pane healthPane = loader.load(); // Load the health pane
+            HBox healthPane = loader.load(); // Load the health pane
             FXMLControllerHealth healthController = loader.getController(); // Get its controller
             // Replace the content of mainPane with the health pane
             mainPane.getChildren().clear();

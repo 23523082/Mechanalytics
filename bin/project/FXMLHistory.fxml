@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLMenuController">
+<HBox fx:id="HistoryPane"  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLControllerHistory">
    <children>
       <VBox prefHeight="720.0" prefWidth="360.0">
          <children>
@@ -62,7 +62,7 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="299.0" prefHeight="80.0" prefWidth="240.0">
                      <children>
-                        <Button fx:id="btn_Menu2" mnemonicParsing="false" onAction="#handleButtonAction2" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="  Notification">
+                        <Button fx:id="Notification_btn" mnemonicParsing="false" onAction="#MoveToNotification" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="  Notification">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -82,7 +82,7 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="428.0" prefHeight="80.0" prefWidth="240.0">
                      <children>
-                        <Button fx:id="btn_Menu3" mnemonicParsing="false" onAction="#handleButtonAction3" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="  Guidance">
+                        <Button fx:id="Guide_btn" mnemonicParsing="false" onAction="#MoveToGuide" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="  Guidance">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -102,7 +102,7 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="550.0" prefHeight="80.0" prefWidth="240.0">
                      <children>
-                        <Button fx:id="btn_Menu4" mnemonicParsing="false" onAction="#handleButtonAction4" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="  History">
+                        <Button fx:id="History_btn" mnemonicParsing="false" onAction="#MoveToHistory" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="  History">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>

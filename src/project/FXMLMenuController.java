@@ -63,6 +63,7 @@ public class FXMLMenuController implements Initializable {
     @FXML
     void MoveToHistory(ActionEvent event) {
         try {
+<<<<<<< HEAD
         // Correct the resource path to point to FXMLHistory.fxml
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLHistory.fxml"));
         // Load the history pane, assuming it's also an HBox or adjust as necessary
@@ -118,6 +119,19 @@ public class FXMLMenuController implements Initializable {
     } catch (IOException e) {
         e.printStackTrace(); // Handle the exception
     }
+=======
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLHistory.fxml"));
+            HBox HistoryPane = loader.load(); // Load the history pane
+            FXMLControllerHistory historyController = loader.getController(); // Get its controller 
+            // Replace the content of mainPane with the history pane
+            mainPane.getChildren().clear();
+            mainPane.getChildren().add(HistoryPane);
+            // Optionally pass data to the history controller
+            // historyController.setData(someData);
+        } catch (IOException e) {
+            e.printStackTrace(); // Handle the exception if needed
+        }
+>>>>>>> ea473d30059138dee12342ac2373bb5edb6884c1
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {

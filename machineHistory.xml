@@ -1,0 +1,11 @@
+<history>
+  <machineHistory>
+    <date>2024-01-01</date>
+    <userName>JohnDoe</userName>
+    <machineName>Lathe</machineName>
+    <machineBrand>BrandX</machineBrand>
+    <issueType>Maintenance</issueType>
+    <description>Regular maintenance performed</description>
+    <status>Completed</status>
+  </machineHistory>
+</history>

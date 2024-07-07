@@ -66,7 +66,7 @@ public class FXMLMenuController implements Initializable {
     private void MoveToHistory(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLHistory.fxml"));
-            Pane HistoryPane = loader.load(); // Load the history pane
+            HBox HistoryPane = loader.load(); // Load the history pane
             FXMLControllerHistory historyController = loader.getController(); // Get its controller 
             // Replace the content of mainPane with the history pane
             mainPane.getChildren().clear();

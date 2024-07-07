@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.StackedAreaChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -24,7 +25,7 @@ import javafx.scene.layout.Pane;
 
 public class FXMLControllerHealth implements Initializable {
 
-    @FXML
+     @FXML
     private HBox Healthpane;
     @FXML
     private AnchorPane side_ankerpane;
@@ -41,8 +42,6 @@ public class FXMLControllerHealth implements Initializable {
     @FXML
     private NumberAxis yAxis;
     @FXML
-    private Label ModuleName;
-    @FXML
     private Label name;
     @FXML
     private Label status;
@@ -50,17 +49,17 @@ public class FXMLControllerHealth implements Initializable {
     private Label temperature;
     @FXML
     private Label age;
+    @FXML
+    private Label moduleseries;
+    @FXML
+    private Label modulehealth;
+    @FXML
+    private Label modulecurrent;
+    @FXML
+    private LineChart<String, Number> modulechart;
+
     
 
-    @FXML
-    void CycleChart(ActionEvent event) {
-        XYChart.Series<String, Number> series1 = new XYChart.Series<>();
-        series1.getData().clear();
-        series1.getData().add(new XYChart.Data<>("Jan", 30));
-        series1.getData().add(new XYChart.Data<>("Feb", 25));
-        series1.getData().add(new XYChart.Data<>("Mar", 35));
-        lineChart.getData().addAll(series1);
-    }
 
     @FXML
     void history(ActionEvent event) {
@@ -80,6 +79,7 @@ public class FXMLControllerHealth implements Initializable {
     void handleButtonAction4(ActionEvent event) {
         // Button action code here
     }
+    
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -89,18 +89,32 @@ public class FXMLControllerHealth implements Initializable {
 
     private void loadDataFromXML() {
         XStream xStream = new XStream();
+        XStream moduleStream = new XStream();
         xStream.addPermission(AnyTypePermission.ANY); // Allow all types (use with caution)
         xStream.alias("machine", Machine.class);
+        moduleStream.addPermission(AnyTypePermission.ANY);
+        moduleStream.alias("module", Module.class);
 
         try (FileReader reader = new FileReader("machine.xml")) {
             Machine loadedMachine = (Machine) xStream.fromXML(reader);
 
             // Display data in labels
-            ModuleName.setText("Machine Data");
+            
             name.setText(loadedMachine.getMachineName());
             status.setText(loadedMachine.getHealthStatus());
             temperature.setText(loadedMachine.getTemperature());
             age.setText(loadedMachine.getAge());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try (FileReader reader = new FileReader("module.xml")) {
+            Module loadedModule = (Module) moduleStream.fromXML(reader);
+
+            // Display data in labels
+            
+            moduleseries.setText(loadedModule.getModuleSeries());
+            modulehealth.setText(loadedModule.getModuleHealth());
+            modulecurrent.setText(loadedModule.getModuleCurrent());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -123,21 +137,22 @@ public class FXMLControllerHealth implements Initializable {
         series1.getData().add(new XYChart.Data<>("Dec", 25));
 
         XYChart.Series<String, Number> series2 = new XYChart.Series<>();
-        series2.setName("Portfolio 2");
+        series2.setName("Module Health Index");
         series2.getData().add(new XYChart.Data<>("Jan", 33));
         series2.getData().add(new XYChart.Data<>("Feb", 34));
-        series2.getData().add(new XYChart.Data<>("Mar", 25));
-        series2.getData().add(new XYChart.Data<>("Apr", 44));
-        series2.getData().add(new XYChart.Data<>("May", 39));
-        series2.getData().add(new XYChart.Data<>("Jun", 16));
-        series2.getData().add(new XYChart.Data<>("Jul", 55));
-        series2.getData().add(new XYChart.Data<>("Aug", 54));
-        series2.getData().add(new XYChart.Data<>("Sep", 48));
-        series2.getData().add(new XYChart.Data<>("Oct", 27));
-        series2.getData().add(new XYChart.Data<>("Nov", 37));
-        series2.getData().add(new XYChart.Data<>("Dec", 29));
+        series2.getData().add(new XYChart.Data<>("Mar", 37));
+        series2.getData().add(new XYChart.Data<>("Apr", 45));
+        series2.getData().add(new XYChart.Data<>("May", 35));
+        series2.getData().add(new XYChart.Data<>("Jun", 30));
+        series2.getData().add(new XYChart.Data<>("Jul", 38));
+        series2.getData().add(new XYChart.Data<>("Aug", 41));
+        series2.getData().add(new XYChart.Data<>("Sep", 33));
+        series2.getData().add(new XYChart.Data<>("Oct", 32));
+        series2.getData().add(new XYChart.Data<>("Nov", 38));
+        series2.getData().add(new XYChart.Data<>("Dec", 37));
 
-        lineChart.getData().addAll(series1, series2);
+        lineChart.getData().addAll(series1);
+        modulechart.getData().addAll(series2);
     }
 
     

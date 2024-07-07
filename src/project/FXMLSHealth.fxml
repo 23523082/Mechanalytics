@@ -22,7 +22,7 @@
                <children>
                   <Pane fx:id="inner_pane" layoutX="14.0" layoutY="18.0" prefHeight="106.0" prefWidth="330.0" stylesheets="@style.css">
                      <children>
-                        <ImageView fitHeight="110.0" fitWidth="189.0" layoutX="161.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="110.0" fitWidth="189.0" layoutX="176.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@imageMenu/Desain%20tanpa%20judul.png" />
                            </image>
@@ -136,11 +136,6 @@
                 <NumberAxis fx:id="yAxis" side="LEFT" />
               </yAxis>
             </LineChart>
-            <Label fx:id="ModuleName" alignment="CENTER" layoutX="424.0" layoutY="5.0" prefHeight="38.0" prefWidth="112.0" text="Label">
-               <font>
-                  <Font size="26.0" />
-               </font>
-            </Label>
             <Label fx:id="name" alignment="CENTER" layoutX="40.0" layoutY="348.0" prefHeight="38.0" prefWidth="343.0" text="Label">
                <font>
                   <Font size="23.0" />
@@ -161,16 +156,34 @@
                   <Font size="23.0" />
                </font>
             </Label>
-            <Button fx:id="CycleChart" layoutX="94.0" layoutY="612.0" mnemonicParsing="false" onAction="#CycleChart" prefHeight="17.0" prefWidth="176.0" text="Change Chart">
-               <font>
-                  <Font size="21.0" />
-               </font>
-            </Button>
             <Button layoutX="40.0" layoutY="539.0" mnemonicParsing="false" text="Show Potential Malfunction">
                <font>
                   <Font size="21.0" />
                </font>
             </Button>
+            <Label fx:id="moduleseries" alignment="CENTER" layoutX="478.0" layoutY="367.0" prefHeight="38.0" prefWidth="343.0" text="Label">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="modulehealth" alignment="CENTER" layoutX="478.0" layoutY="405.0" prefHeight="38.0" prefWidth="343.0" text="Label">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="modulecurrent" alignment="CENTER" layoutX="478.0" layoutY="455.0" prefHeight="38.0" prefWidth="343.0" text="label">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <LineChart fx:id="modulechart" layoutX="478.0" layoutY="24.0" prefHeight="314.0" prefWidth="401.0">
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" fx:id="xAxis1" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="yAxis1" side="LEFT" />
+               </yAxis>
+            </LineChart>
          </children>
       </Pane>
    </children>

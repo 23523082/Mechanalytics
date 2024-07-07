@@ -10,14 +10,26 @@ import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-public class FXMLMenuController implements Initializable {
+import javafx.scene.layout.VBox;
+public class FXMLControllerNotification implements Initializable {
+    
     @FXML
     private HBox mainPane;
+
+    @FXML
+    private VBox Healthpane;
+
+    @FXML
+    private VBox historyPane;
+
+    @FXML
+    private VBox notificationPane;
+
     @FXML
     private void MachineHealth(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSHealth.fxml"));
-            HBox healthPane = loader.load(); // Load the health pane
+            Pane healthPane = loader.load(); // Load the health pane
             FXMLControllerHealth healthController = loader.getController(); // Get its controller
             // Replace the content of mainPane with the health pane
             mainPane.getChildren().clear();
@@ -29,14 +41,14 @@ public class FXMLMenuController implements Initializable {
         }
     }
     @FXML
-    private void MoveToNotification(ActionEvent event) {
+    private void handleButtonAction2(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLNotification.fxml"));
-            Pane NotificationPane = loader.load(); // Load the notification pane
+            Pane notificationPane = loader.load(); // Load the notification pane
             FXMLControllerNotification notificationController = loader.getController(); // Get its controller
             // Replace the content of mainPane with the notification pane
             mainPane.getChildren().clear();
-            mainPane.getChildren().add(NotificationPane);
+            mainPane.getChildren().add(notificationPane);
             // Optionally pass data to the notification controller
             // notificationController.setData(someData);
         } catch (IOException e) {
@@ -44,18 +56,18 @@ public class FXMLMenuController implements Initializable {
         }
     }
     @FXML
-    private void MoveToGuide(ActionEvent event) {
+    private void handleButtonAction3(ActionEvent event) {
         System.out.println("button 3 clicked");
     }
     @FXML
-    private void MoveToHistory(ActionEvent event) {
+    private void handleButtonAction4(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLHistory.fxml"));
-            Pane HistoryPane = loader.load(); // Load the history pane
+            Pane historyPane = loader.load(); // Load the history pane
             FXMLControllerHistory historyController = loader.getController(); // Get its controller 
             // Replace the content of mainPane with the history pane
             mainPane.getChildren().clear();
-            mainPane.getChildren().add(HistoryPane);
+            mainPane.getChildren().add(historyPane);
             // Optionally pass data to the history controller
             // historyController.setData(someData);
         } catch (IOException e) {

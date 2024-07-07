@@ -28,7 +28,7 @@ public class ControllerScene1 implements Initializable {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        if ("UserName".equals(username) && "RCTIOK".equals(password)) {
+        if ("1".equals(username) && "2".equals(password)) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSMenu.fxml"));
                 Pane page = loader.load();

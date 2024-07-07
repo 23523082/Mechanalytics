@@ -41,7 +41,7 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="165.0" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Machine Health">
+                        <Button fx:id="MachineHealth" mnemonicParsing="false" onAction="#MachineHealth" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Machine Health">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -61,7 +61,7 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="299.0" prefHeight="80.0" prefWidth="240.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Notification">
+                        <Button fx:id="Notification_btn" mnemonicParsing="false" onAction="#MoveToNotification" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Notification">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -81,7 +81,7 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="428.0" prefHeight="80.0" prefWidth="240.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Guidance">
+                        <Button fx:id="Guide_btn" mnemonicParsing="false" prefHeight="80.0" onAction="#MoveToGuide" prefWidth="240.0" stylesheets="@style.css" text="Guidance">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -101,7 +101,7 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="550.0" prefHeight="80.0" prefWidth="240.0">
                      <children>
-                        <Button fx:id="btn_Menu4" mnemonicParsing="false" onAction="#history" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="  History">
+                        <Button fx:id="History_btn" mnemonicParsing="false" onAction="#MoveToHistory" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="  History">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>

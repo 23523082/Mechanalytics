@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="HistoryPane"  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLControllerHistory">
+<HBox fx:id="HistoryPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLControllerHistory">
    <children>
       <VBox prefHeight="720.0" prefWidth="360.0">
          <children>
@@ -23,7 +23,7 @@
                <children>
                   <Pane fx:id="inner_pane" layoutX="14.0" layoutY="18.0" prefHeight="106.0" prefWidth="330.0" stylesheets="@style.css">
                      <children>
-                        <ImageView fitHeight="110.0" fitWidth="189.0" layoutX="161.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="MoveToMenu_btn" fitHeight="110.0" fitWidth="189.0" layoutX="161.0" onMouseClicked="#MoveToMenu" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@imageMenu/Desain%20tanpa%20judul.png" />
                            </image>
@@ -42,7 +42,7 @@
                   </Pane>
                   <Pane layoutX="56.0" layoutY="165.0" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css">
                      <children>
-                        <Button fx:id="MachineHealth" mnemonicParsing="false" onAction="#MachineHealth" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Machine Health">
+                        <Button fx:id="Health_btn" mnemonicParsing="false" onAction="#moveToMachineHealth" prefHeight="80.0" prefWidth="240.0" stylesheets="@style.css" text="Machine Health">
                            <graphic>
                               <ImageView fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>

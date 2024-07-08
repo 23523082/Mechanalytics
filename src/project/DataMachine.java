@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DataMachine {
 
@@ -48,11 +50,36 @@ public class DataMachine {
         return null;
     }
 
+    @SuppressWarnings("unchecked")
+    public static List<Machine> loadMachineFromXMLforCombobox(String filename) {
+        XStream xStream = new XStream();
+        xStream.alias("machine", Machine.class);
+        
+        try (FileReader reader = new FileReader(filename)) {
+            return (List<Machine>) xStream.fromXML(reader);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return new ArrayList<>();
+    }
+    public static List<String> getAllMachineNames(String filename) {
+        List<Machine> machines = loadMachineFromXMLforCombobox(filename);
+        List<String> machineNames = new ArrayList<>();
+
+        if (machines != null) {
+            for (Machine machine : machines) {
+                machineNames.add(machine.getMachineName());
+            }
+        }
+        return machineNames;
+    }
+
     // Method to simulate machine data update
     public static Machine getUpdatedMachineData() {
         // Simulate updated machine data
-        return new Machine("Lathe", "Operational", "75°C", "5 years");
+        return new Machine("Lathe", "Operational", "75°C", "5 years", null);
     }
+    
 
     // Method to update XML with new machine data
     public static void updateMachineData() {

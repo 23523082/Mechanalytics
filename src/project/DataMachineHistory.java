@@ -52,5 +52,13 @@ public class DataMachineHistory {
             writeXMLToFile(xml, filename);
         }
     }
+    public static void saveMachineHistoryToXML(String filename, List<MachineHistory> historyList) {
+         XStream xStream = new XStream();
+        try (FileWriter writer = new FileWriter(filename)) {
+            xStream.toXML(historyList, writer);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

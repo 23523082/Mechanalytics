@@ -76,7 +76,7 @@ public class FXMLControllerHealth implements Initializable {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLHistory.fxml"));
             HBox historyPane = loader.load(); 
-            FXMLControllerHistory historyController = loader.getController(); // Get its controller 
+            
             Healthpane.getChildren().clear();
             Healthpane.getChildren().add(historyPane);
             // Optionally pass data to the history controller
@@ -165,8 +165,8 @@ public class FXMLControllerHealth implements Initializable {
         series2.getData().add(new XYChart.Data<>("Nov", 38));
         series2.getData().add(new XYChart.Data<>("Dec", 37));
 
-        lineChart.getData().addAll(series1);
-        modulechart.getData().addAll(series2);
+        lineChart.getData().add(series1);
+        modulechart.getData().add(series2);
     }
 
     

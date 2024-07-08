@@ -2,7 +2,7 @@
 
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <HBox fx:id="NotificationPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="722.0" prefWidth="1284.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLControllerNotification">
    <children>
@@ -19,7 +20,7 @@
                <children>
                   <Pane fx:id="inner_pane" layoutX="14.0" layoutY="18.0" prefHeight="106.0" prefWidth="330.0" stylesheets="@style.css">
                      <children>
-                        <ImageView fx:id="MoveToMenu_btn" fitHeight="110.0" fitWidth="189.0" layoutX="161.0" onMouseClicked="#MoveToMenu" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="110.0" fitWidth="189.0" layoutX="161.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@imageMenu/Desain%20tanpa%20judul.png" />
                            </image>
@@ -123,26 +124,228 @@
                </styleClass></AnchorPane>
          </children>
       </VBox>
-      <Pane prefHeight="722.0" prefWidth="926.0">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="360.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../Downloads/Mechanalytics-master/src/project/imageMenu/Desain%20tanpa%20judul%20(2).png" />
-               </image>
-            </ImageView>
-            <ListView layoutY="216.0" prefHeight="43.0" prefWidth="920.0" />
-            <ListView layoutY="254.0" prefHeight="43.0" prefWidth="920.0" />
-            <ListView layoutX="1.0" layoutY="297.0" prefHeight="43.0" prefWidth="920.0" />
-            <ListView layoutX="1.0" layoutY="340.0" prefHeight="43.0" prefWidth="920.0" />
-            <ListView layoutX="1.0" layoutY="383.0" prefHeight="43.0" prefWidth="920.0" />
-            <ListView layoutX="1.0" layoutY="425.0" prefHeight="43.0" prefWidth="920.0" />
-            <ListView layoutX="1.0" layoutY="468.0" prefHeight="43.0" prefWidth="920.0" />
-            <ListView layoutX="1.0" layoutY="510.0" prefHeight="43.0" prefWidth="920.0" />
-            <ListView layoutX="1.0" layoutY="553.0" prefHeight="43.0" prefWidth="920.0" />
-            <ListView layoutX="1.0" layoutY="597.0" prefHeight="43.0" prefWidth="920.0" />
-            <ListView layoutX="1.0" layoutY="636.0" prefHeight="43.0" prefWidth="920.0" />
-            <ListView layoutY="680.0" prefHeight="43.0" prefWidth="920.0" />
+            <Pane prefHeight="722.0" prefWidth="926.0" styleClass="background_notification" stylesheets="@stylenotification.css">
+               <children>
+                  <ImageView fitHeight="158.0" fitWidth="152.0" layoutX="393.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imageMenu/4.png" />
+                     </image>
+                  </ImageView>
+                  <ScrollPane layoutY="169.0" prefHeight="554.0" prefWidth="926.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="817.0" prefWidth="926.0">
+                           <children>
+                              <VBox prefHeight="722.0" prefWidth="924.0">
+                                 <children>
+                                    <HBox prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
+                                       <children>
+                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@NotificationImage/6.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="60.0" prefWidth="861.0">
+                                             <children>
+                                                <Text layoutX="29.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Engine performance has decreased significantly. Have it checked immediately.&quot;">
+                                                   <font>
+                                                      <Font name="Calibri Italic" size="18.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
+                                       <children>
+                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@NotificationImage/7.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="60.0" prefWidth="861.0">
+                                             <children>
+                                                <Text layoutX="29.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Attention! The machine shows signs of wear. Pay attention to perform an inspection.&quot;">
+                                                   <font>
+                                                      <Font name="Calibri Italic" size="18.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
+                                       <children>
+                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@NotificationImage/8.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="60.0" prefWidth="861.0">
+                                             <children>
+                                                <Text layoutX="29.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="“The machine is not working at optimal performance. Check operating parameters.”">
+                                                   <font>
+                                                      <Font name="Calibri Italic" size="18.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
+                                       <children>
+                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@NotificationImage/9.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="60.0" prefWidth="861.0">
+                                             <children>
+                                                <Text layoutX="29.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;The latest version of the app is available. Please update for the latest features and maintenance.&quot;">
+                                                   <font>
+                                                      <Font name="Calibri Italic" size="18.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
+                                       <children>
+                                          <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@NotificationImage/10.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="60.0" prefWidth="861.0">
+                                             <children>
+                                                <Text layoutX="29.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Regular maintenance is scheduled on {schedule_date}.&quot;">
+                                                   <font>
+                                                      <Font name="Calibri Italic" size="18.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
+                                       <children>
+                                          <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@NotificationImage/11.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="60.0" prefWidth="861.0">
+                                             <children>
+                                                <Text layoutX="29.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Critical! The machine has a fatal problem and requires immediate maintenance to prevent further damage.&quot;">
+                                                   <font>
+                                                      <Font name="Calibri Italic" size="18.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="140.0" prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
+                                       <children>
+                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@NotificationImage/8.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="60.0" prefWidth="861.0">
+                                             <children>
+                                                <Text layoutX="29.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="“The machine is not working at optimal performance. Check operating parameters.”">
+                                                   <font>
+                                                      <Font name="Calibri Italic" size="18.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="140.0" prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
+                                       <children>
+                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@NotificationImage/8.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="60.0" prefWidth="861.0">
+                                             <children>
+                                                <Text layoutX="29.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="“The machine is not working at optimal performance. Check operating parameters.”">
+                                                   <font>
+                                                      <Font name="Calibri Italic" size="18.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="269.0" prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
+                                       <children>
+                                          <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@NotificationImage/10.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="60.0" prefWidth="861.0">
+                                             <children>
+                                                <Text layoutX="29.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Regular maintenance is scheduled on {schedule_date}.&quot;">
+                                                   <font>
+                                                      <Font name="Calibri Italic" size="18.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="389.0" prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
+                                       <children>
+                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@NotificationImage/8.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="60.0" prefWidth="861.0">
+                                             <children>
+                                                <Text layoutX="29.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="“The machine is not working at optimal performance. Check operating parameters.”">
+                                                   <font>
+                                                      <Font name="Calibri Italic" size="18.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="204.0" prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
+                                       <children>
+                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@NotificationImage/9.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="60.0" prefWidth="861.0">
+                                             <children>
+                                                <Text layoutX="29.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;The latest version of the app is available. Please update for the latest features and maintenance.&quot;">
+                                                   <font>
+                                                      <Font name="Calibri Italic" size="18.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
          </children>
-      </Pane>
+      </AnchorPane>
    </children>
 </HBox>

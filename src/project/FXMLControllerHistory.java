@@ -121,7 +121,6 @@ public class FXMLControllerHistory implements Initializable {
             for (MachineHistory history : historyList) {
                 System.out.println(history);
             }
-            History_TableView.getItems().addAll(historyList);
         } else {
             System.out.println("Failed to load data from XML.");
         }

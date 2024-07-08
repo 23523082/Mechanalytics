@@ -1,5 +1,5 @@
-<history>
-  <machineHistory>
+<list>
+  <project.MachineHistory>
     <date>2024-01-01</date>
     <userName>JohnDoe</userName>
     <machineName>Lathe</machineName>
@@ -7,5 +7,23 @@
     <issueType>Maintenance</issueType>
     <description>Regular maintenance performed</description>
     <status>Completed</status>
-  </machineHistory>
-</history>
+  </project.MachineHistory>
+  <project.MachineHistory>
+    <date>2024-01-01</date>
+    <userName>YuanZhao</userName>
+    <machineName>Lathe</machineName>
+    <machineBrand>BrandX</machineBrand>
+    <issueType>Abnormal Heating</issueType>
+    <description>Last 2 months shows a fluctuation of temperature</description>
+    <status>Pending</status>
+  </project.MachineHistory>
+  <project.MachineHistory>
+    <date>2024-03-02</date>
+    <userName>RizkiEka</userName>
+    <machineName>Lathe</machineName>
+    <machineBrand>Starlink</machineBrand>
+    <issueType>Malfunction</issueType>
+    <description>Total Malfunction, need whole repair</description>
+    <status>Pending</status>
+  </project.MachineHistory>
+</list>

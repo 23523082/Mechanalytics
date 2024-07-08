@@ -6,7 +6,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -34,29 +33,24 @@ public class FXMLMenuController implements Initializable {
     private void  moveToMachineHealth(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSHealth.fxml"));
-            HBox Healthpane = loader.load(); // Load the health pane
-            FXMLControllerHealth controllerHealth = loader.getController(); // Get its controller
+            HBox Healthpane = loader.load(); 
             mainPane.getChildren().clear();
             mainPane.getChildren().add(Healthpane);
-            // Optionally pass data to the health controller
-            // healthController.setData(someData);
+
         } catch (IOException e) {
-            e.printStackTrace(); // Handle the exception if needed
+            e.printStackTrace(); 
         }
     }
        @FXML
     void MoveToGuide(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLGuide.fxml"));
-            HBox GuidePane = loader.load(); // Load the health pane
-            FXMLControllerGuide FXMLGUIDENS = loader.getController(); // Get its controller
-            // Replace the content of mainPane with the health pane
+            HBox GuidePane = loader.load(); 
             mainPane.getChildren().clear();
             mainPane.getChildren().add(GuidePane);
-            // Optionally pass data to the health controller
-            // healthController.setData(someData);
+            
         } catch (IOException e) {
-            e.printStackTrace(); // Handle the exception if needed
+            e.printStackTrace(); 
         }
     }
 

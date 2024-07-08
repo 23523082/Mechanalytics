@@ -71,7 +71,6 @@ public class FXMLControllerHealth implements Initializable {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLGuide.fxml"));
             HBox GuidePane = loader.load(); // Load the health pane
-            FXMLControllerGuide FXMLGUIDENS = loader.getController(); // Get its controller
             // Replace the content of mainPane with the health pane
             Healthpane.getChildren().clear();
             Healthpane.getChildren().add(GuidePane);
@@ -85,7 +84,6 @@ public class FXMLControllerHealth implements Initializable {
     @FXML
     void MoveToHistory(ActionEvent event) {
         try {
-<<<<<<< HEAD
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLHistory.fxml"));
             HBox historyPane = loader.load(); 
             
@@ -95,25 +93,8 @@ public class FXMLControllerHealth implements Initializable {
             // historyController.setData(someData);
         } catch (IOException e) {
             e.printStackTrace(); 
-        }
-=======
-        // Correct the resource path to point to FXMLHistory.fxml
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLHistory.fxml"));
-        // Load the history pane, assuming it's also an HBox or adjust as necessary
-        HBox HistoryPane = loader.load();
->>>>>>> 191fcdd4a5637b9933d3d1c436a1207e5bc95147
-
-        // Clear the Healthpane and add the history pane to it
-        Healthpane.getChildren().clear();
-        Healthpane.getChildren().add(HistoryPane);
-
-        // Optionally, if you need to interact with the History controller
-        // FXMLControllerHistory historyController = loader.getController();
-        // historyController.setData(someData); // Pass data if needed
-    } catch (IOException e) {
-        e.printStackTrace(); // Handle the exception
-    }
-    }
+        }}
+    
 
     @FXML
     void MoveToMenu(MouseEvent event) {

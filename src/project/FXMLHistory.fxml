@@ -2,7 +2,6 @@
 
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -14,11 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<<<<<<< HEAD
 <HBox fx:id="HistoryPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLControllerHistory">
-=======
-<HBox fx:id="HistoryPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLControllerHistory">
->>>>>>> 191fcdd4a5637b9933d3d1c436a1207e5bc95147
    <children>
       <VBox prefHeight="720.0" prefWidth="360.0">
          <children>
@@ -162,11 +157,11 @@
                      </font></TextField>
                   <Button fx:id="DeleteNote_IssueMachine" layoutX="720.0" layoutY="14.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="180.0" text="delete" />
                   <Button fx:id="SubmitNote_IssueMachine" layoutX="720.0" layoutY="105.0" mnemonicParsing="false" onAction="#submitMachineHistory" prefHeight="72.0" prefWidth="180.0" text="submit" />
-                  <TextField fx:id="Textdate" layoutX="35.0" layoutY="250.0" onAction="#submitMachineHistory" promptText="address" text="date" />
-                  <TextField fx:id="TextSubmitter" layoutX="205.0" layoutY="250.0" onAction="#submitMachineHistory" promptText="String" text="Submitter" />
-                  <ComboBox fx:id="choose" layoutX="735.0" layoutY="186.0" onAction="#submitMachineHistory" onMouseClicked="#machineName" prefWidth="150.0" promptText="Machine" />
-                  <TextField fx:id="TextMachineBrand" layoutX="392.0" layoutY="250.0" onAction="#submitMachineHistory" promptText="number" text="Machine Brand" />
-                  <TextField fx:id="TextIssueType" layoutX="579.0" layoutY="250.0" onAction="#submitMachineHistory" promptText="number" text="Issue Type" />
+                  <TextField fx:id="Textdate" layoutX="35.0" layoutY="250.0" onAction="#submitMachineHistory" promptText="date" />
+                  <TextField fx:id="TextSubmitter" layoutX="205.0" layoutY="250.0" onAction="#submitMachineHistory" promptText="Submitter" />
+                  <TextField fx:id="TextMachineBrand" layoutX="392.0" layoutY="250.0" onAction="#submitMachineHistory" promptText="Machine brand" />
+                  <TextField fx:id="TextIssueType" layoutX="579.0" layoutY="250.0" onAction="#submitMachineHistory" promptText="Issue Type" />
+                  <TextField fx:id="TextChooseMachine" layoutX="717.0" layoutY="186.0" onAction="#submitMachineHistory" promptText="Machine Name" />
                </children>
             </AnchorPane>
          </children></VBox>

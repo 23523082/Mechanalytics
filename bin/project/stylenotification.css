@@ -1,0 +1,10 @@
+.list_view_notification {
+  -fx-background-color: #ededed;
+  -fx-border-color: black;
+  -fx-border-width: 2px 0 2px 0; /* Top and bottom borders are 2px */
+  -fx-alignment: center; /* Aligns the text to the middle */
+}
+
+.background_notification {
+  -fx-background-color: linear-gradient(to bottom, #8695a3, #ffffff 90%);
+}

@@ -1,36 +1,22 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "DataModule",
-            "request": "launch",
-            "mainClass": "project.DataModule",
-            "projectName": "Mechanalytics-1_5c379cdc"
-        },
-        {
-            "type": "java",
-            "name": "Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "DataMachine",
-            "request": "launch",
-            "mainClass": "project.DataMachine",
-            "projectName": "Mechanalytics-1_5c379cdc"
-        },
-        {
-            "type": "java",
-            "name": "SceneRunner",
-            "request": "launch",
-            "mainClass": "project.SceneRunner",
-            "projectName": "Mechanalytics-1_5c379cdc",
-            "vmArgs": "--module-path  'C:/Users/Etta Lunetta/Documents/javafx/javafx-sdk-17.0.11/lib' --add-modules javafx.controls,javafx.fxml --add-opens=java.base/java.lang.reflect=ALL-UNNAMED"
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "SceneRunner",
+      "request": "launch",
+      "mainClass": "project.SceneRunner",
+      "projectName": "Mechanalytics_58394402",
+      "vmArgs": "--module-path  \"C:/Users/A C E R/Documents/javafx-sdk-21.0.3/lib\" --add-modules javafx.controls,javafx.fxml --add-opens=java.base/java.lang.reflect=ALL-UNNAMED"
+    }
+  ]
 }

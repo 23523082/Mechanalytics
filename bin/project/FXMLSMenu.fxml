@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -123,27 +124,25 @@
                </styleClass></AnchorPane>
          </children>
       </VBox>
-      <Pane prefHeight="720.0" prefWidth="919.0">
+      <Pane prefHeight="720.0" prefWidth="919.0" styleClass="background-notif" stylesheets="@stylehealth.css">
          <children>
-            <Pane layoutX="17.0" layoutY="338.0" prefHeight="359.0" prefWidth="891.0">
-               <styleClass>
-                  <String fx:value="white_bg" />
-                  <String fx:value="shadow" />
-               </styleClass>
-            </Pane>
-            <Pane layoutX="370.0" layoutY="87.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@style.css">
+            <Pane layoutX="375.0" layoutY="150.0" prefHeight="200.0" prefWidth="200.0" styleClass="text-label">
                <children>
                   <ImageView fitHeight="216.0" fitWidth="223.0" layoutX="7.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imageMenu/Desain%20tanpa%20judul%20(2).png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="1.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome UserName">
-                     <font>
-                        <Font name="Calibri" size="24.0" />
-                     </font>
-                  </Text>
-               </children></Pane>
+               </children>
+               <stylesheets>
+                  <URL value="@style.css" />
+                  <URL value="@stylehealth.css" />
+               </stylesheets></Pane>
+            <Text fill="WHITE" layoutX="340.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-menu" text="Welcome UserName">
+               <font>
+                  <Font name="Calibri" size="32.0" />
+               </font>
+            </Text>
          </children>
       </Pane>
    </children>

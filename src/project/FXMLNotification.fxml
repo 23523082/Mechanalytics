@@ -126,22 +126,26 @@
       </VBox>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Pane prefHeight="722.0" prefWidth="926.0" styleClass="background_notification" stylesheets="@stylenotification.css">
+            <Pane prefHeight="171.0" prefWidth="923.0" styleClass="background-notif" stylesheets="@stylehealth.css">
                <children>
-                  <ImageView fitHeight="158.0" fitWidth="152.0" layoutX="393.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imageMenu/4.png" />
-                     </image>
-                  </ImageView>
+                  <AnchorPane layoutX="-1.0" prefHeight="172.0" prefWidth="926.0">
+                     <children>
+                        <ImageView fitHeight="158.0" fitWidth="152.0" layoutX="387.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@imageMenu/4.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
                   <ScrollPane layoutY="169.0" prefHeight="554.0" prefWidth="926.0">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="817.0" prefWidth="926.0">
                            <children>
                               <VBox prefHeight="722.0" prefWidth="924.0">
                                  <children>
-                                    <HBox prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
+                                    <HBox prefHeight="60.0" prefWidth="924.0" stylesheets="@stylenotification.css">
                                        <children>
-                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="47.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@NotificationImage/6.png" />
                                              </image>
@@ -156,10 +160,14 @@
                                              </children>
                                           </Pane>
                                        </children>
+                                       <styleClass>
+                                          <String fx:value="list_view_notification" />
+                                          <String fx:value="background-notif" />
+                                       </styleClass>
                                     </HBox>
                                     <HBox prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
                                        <children>
-                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@NotificationImage/7.png" />
                                              </image>
@@ -177,7 +185,7 @@
                                     </HBox>
                                     <HBox prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
                                        <children>
-                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@NotificationImage/8.png" />
                                              </image>
@@ -195,7 +203,7 @@
                                     </HBox>
                                     <HBox prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
                                        <children>
-                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@NotificationImage/9.png" />
                                              </image>
@@ -213,7 +221,7 @@
                                     </HBox>
                                     <HBox prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
                                        <children>
-                                          <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@NotificationImage/10.png" />
                                              </image>
@@ -231,7 +239,7 @@
                                     </HBox>
                                     <HBox prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
                                        <children>
-                                          <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@NotificationImage/11.png" />
                                              </image>
@@ -249,7 +257,7 @@
                                     </HBox>
                                     <HBox layoutX="10.0" layoutY="140.0" prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
                                        <children>
-                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@NotificationImage/8.png" />
                                              </image>
@@ -267,7 +275,7 @@
                                     </HBox>
                                     <HBox layoutX="10.0" layoutY="140.0" prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
                                        <children>
-                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@NotificationImage/8.png" />
                                              </image>
@@ -285,7 +293,7 @@
                                     </HBox>
                                     <HBox layoutX="10.0" layoutY="269.0" prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
                                        <children>
-                                          <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@NotificationImage/10.png" />
                                              </image>
@@ -303,7 +311,7 @@
                                     </HBox>
                                     <HBox layoutX="10.0" layoutY="389.0" prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
                                        <children>
-                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@NotificationImage/8.png" />
                                              </image>
@@ -321,7 +329,7 @@
                                     </HBox>
                                     <HBox layoutX="10.0" layoutY="204.0" prefHeight="60.0" prefWidth="924.0" styleClass="list_view_notification" stylesheets="@stylenotification.css">
                                        <children>
-                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@NotificationImage/9.png" />
                                              </image>

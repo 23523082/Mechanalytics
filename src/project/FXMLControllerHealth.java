@@ -18,6 +18,7 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.effect.Glow;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -227,11 +228,17 @@ public class FXMLControllerHealth implements Initializable {
         series2.getData().add(new XYChart.Data<>("Oct", 32));
         series2.getData().add(new XYChart.Data<>("Nov", 38));
         series2.getData().add(new XYChart.Data<>("Dec", 37));
-
+  
         lineChart.getData().add(series1);
         modulechart.getData().add(series2);
-    }
+        lineChart.lookup(".chart-plot-background").setStyle("-fx-background-color: transparent;");
+        modulechart.lookup(".chart-plot-background").setStyle("-fx-background-color: transparent;");
+        Glow glowBlue = new Glow(0.8); // Adjust the level as needed
+        series1.getNode().setStyle("-fx-stroke: #eb9d9dbe; fx-opacity: 0.5;"); // Blue color
+        series1.getNode().setEffect(glowBlue);
+        Glow glowOrange = new Glow(0.8); // Adjust the level as needed
+        series2.getNode().setStyle("-fx-stroke: #ffc477; fx-opacity: 0.5;"); // Orange color
+        series2.getNode().setEffect(glowOrange);
 
-    
-    
+    }
 }

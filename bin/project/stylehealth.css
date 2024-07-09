@@ -1,0 +1,94 @@
+.glowing-line-chart {
+  -fx-effect: dropshadow(three-pass-box, #60fffa, 10, 0, 0, 0);
+  -fx-background-color: transparent;
+}
+
+.axis-label {
+  -fx-text-fill: black;
+}
+
+.button-main {
+  -fx-padding: 0.7em 0.57em;
+  -jfx-button-type: raised;
+  -fx-background-color: #3a6183;
+  -fx-pref-width: 300;
+  -fx-text-fill: rgb(255, 255, 255);
+  -fx-font-calibri: 26px;
+  -fx-background-radius: 10;
+  -fx-effect: dropshadow(three-pass-box, rgb(72, 72, 159), 10, 0, 0, 0);
+  -fx-border-width: 2px 2px 2px 2px;
+  -fx-background-radius: 5px;
+  -fx-border-style: solid;
+  -fx-border-color: rgb(216, 216, 216);
+}
+
+.button-main:hover {
+  -fx-background-color: #2d353d;
+}
+
+.background-top {
+  -fx-background-color: #3c444b;
+  -fx-effect: dropshadow(three-pass-box, rgb(72, 72, 159), 10, 0, 0, 0);
+}
+
+.button-raised {
+  -fx-padding: 0.7em 0.57em;
+  -jfx-button-type: raised;
+  -fx-background-color: #293a48;
+  -fx-pref-width: 180;
+  -fx-text-fill: rgb(255, 255, 255);
+  -fx-font-calibri: 26px;
+}
+
+.button-raised:hover {
+  -fx-background-color: #2d353d;
+}
+
+.text-label {
+  -fx-text-fill: #68efe6;
+  -fx-effect: dropshadow(three-pass-box, rgb(74, 128, 162), 10, 0, 0, 0);
+  -fx-font-size: 24px;
+  -fx-font-weight: bold;
+}
+
+.text-menu {
+  -fx-text-fill: #68efe6;
+  -fx-effect: dropshadow(three-pass-box, rgb(255, 255, 255), 10, 0, 0, 0);
+  -fx-font-weight: bold;
+}
+
+.background-notif {
+  -fx-padding: 0.7em 0.57em;
+  -jfx-button-type: raised;
+  -fx-background-color: #7696b2;
+  -fx-effect: dropshadow(three-pass-box, rgb(72, 72, 159), 10, 0, 0, 0);
+}
+
+.search {
+  -fx-background-color: #ffffff;
+  -fx-effect: dropshadow(three-pass-box, rgb(0, 0, 0), 10, 0, 0, 0);
+}
+
+.text-label-white {
+  -fx-text-fill: rgb(255, 255, 255);
+  -fx-effect: dropshadow(three-pass-box, rgb(45, 45, 45), 10, 0, 0, 0);
+  -fx-font-weight: bold;
+}
+
+.button-history {
+  -fx-padding: 0.7em 0.57em;
+  -jfx-button-type: raised;
+  -fx-background-color: #3a6183;
+  -fx-text-fill: rgb(255, 255, 255);
+  -fx-font-calibri: 26px;
+  -fx-background-radius: 10;
+  -fx-effect: dropshadow(three-pass-box, rgb(72, 72, 159), 10, 0, 0, 0);
+  -fx-border-width: 2px 2px 2px 2px;
+  -fx-background-radius: 5px;
+  -fx-border-style: solid;
+  -fx-border-color: rgb(216, 216, 216);
+}
+
+.button-history:hover {
+  -fx-background-color: #c0c0c0; /* Lighter shade when hovered */
+}

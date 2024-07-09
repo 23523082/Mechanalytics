@@ -13,6 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <HBox fx:id="Healthpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLControllerHealth">
    <children>
@@ -126,64 +127,112 @@
                </styleClass></AnchorPane>
          </children>
       </VBox>
-      <Pane prefHeight="720.0" prefWidth="919.0">
+      <Pane prefHeight="720.0" prefWidth="920.0">
          <children>
-            <LineChart fx:id="lineChart" layoutX="17.0" layoutY="24.0" prefHeight="314.0" prefWidth="401.0">
-              <xAxis>
-                <CategoryAxis side="BOTTOM" fx:id="xAxis" />
-              </xAxis>
-              <yAxis>
-                <NumberAxis fx:id="yAxis" side="LEFT" />
-              </yAxis>
-            </LineChart>
-            <Label fx:id="name" alignment="CENTER" layoutX="40.0" layoutY="348.0" prefHeight="38.0" prefWidth="343.0" text="Label">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-            <Label fx:id="status" alignment="CENTER" layoutX="40.0" layoutY="379.0" prefHeight="38.0" prefWidth="343.0" text="Label">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-            <Label fx:id="temperature" alignment="CENTER" layoutX="40.0" layoutY="417.0" prefHeight="38.0" prefWidth="343.0" text="Label">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-            <Label fx:id="age" alignment="CENTER" layoutX="40.0" layoutY="455.0" prefHeight="38.0" prefWidth="343.0" text="Label">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-            <Button layoutX="40.0" layoutY="539.0" mnemonicParsing="false" text="Show Potential Malfunction">
-               <font>
-                  <Font size="21.0" />
-               </font>
-            </Button>
-            <Label fx:id="moduleseries" alignment="CENTER" layoutX="478.0" layoutY="367.0" prefHeight="38.0" prefWidth="343.0" text="Label">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-            <Label fx:id="modulehealth" alignment="CENTER" layoutX="478.0" layoutY="405.0" prefHeight="38.0" prefWidth="343.0" text="Label">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-            <Label fx:id="modulecurrent" alignment="CENTER" layoutX="478.0" layoutY="455.0" prefHeight="38.0" prefWidth="343.0" text="label">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-            <LineChart fx:id="modulechart" layoutX="478.0" layoutY="24.0" prefHeight="314.0" prefWidth="401.0">
-               <xAxis>
-                  <CategoryAxis side="BOTTOM" fx:id="xAxis1" />
-               </xAxis>
-               <yAxis>
-                  <NumberAxis fx:id="yAxis1" side="LEFT" />
-               </yAxis>
-            </LineChart>
+            <AnchorPane layoutX="-3.0" layoutY="-2.0" prefHeight="720.0" prefWidth="920.0" styleClass="background" stylesheets="@stylehealth.css">
+               <children>
+                  <AnchorPane prefHeight="723.0" prefWidth="923.0" styleClass="background-top" stylesheets="@stylehealth.css">
+                     <children>
+                        <Label fx:id="name" alignment="CENTER" layoutX="176.0" layoutY="26.0" prefHeight="42.0" prefWidth="177.0" styleClass="text-label" stylesheets="@stylehealth.css" text="Label" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Text fill="WHITE" layoutX="38.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name Machine :" wrappingWidth="186.20001220703125">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="80.0" prefHeight="278.0" prefWidth="925.0">
+                     <children>
+                        <LineChart fx:id="lineChart" prefHeight="278.0" prefWidth="756.0">
+                          <xAxis>
+                            <CategoryAxis prefHeight="27.0" prefWidth="875.0" side="BOTTOM" tickLabelFill="WHITE" fx:id="xAxis" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="yAxis" side="LEFT" tickLabelFill="WHITE" />
+                          </yAxis>
+                        </LineChart>
+                        <Label fx:id="status" alignment="CENTER" layoutX="746.0" layoutY="36.0" prefHeight="38.0" prefWidth="177.0" styleClass="text-label" stylesheets="@stylehealth.css" text="Label" textFill="#68efe6">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="temperature" alignment="CENTER" layoutX="753.0" layoutY="119.0" prefHeight="38.0" prefWidth="158.0" styleClass="text-label" stylesheets="@stylehealth.css" text="Label" textFill="#68efe6">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="age" alignment="CENTER" layoutX="753.0" layoutY="199.0" prefHeight="38.0" prefWidth="158.0" styleClass="text-label" stylesheets="@stylehealth.css" text="Label" textFill="#68efe6">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Text fill="WHITE" layoutX="800.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="769.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temperature">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="810.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <Pane layoutY="355.0" prefHeight="276.0" prefWidth="925.0">
+                     <children>
+                        <LineChart fx:id="modulechart" prefHeight="260.0" prefWidth="930.0">
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" tickLabelFill="WHITE" fx:id="xAxis1" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="yAxis1" side="LEFT" tickLabelFill="WHITE" />
+                           </yAxis>
+                        </LineChart>
+                     </children>
+                  </Pane>
+                  <Label fx:id="moduleseries" alignment="CENTER" layoutX="405.0" layoutY="636.0" prefHeight="66.0" prefWidth="135.0" stylesheets="@stylehealth.css" text="Label">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="glowing-line-chart" />
+                        <String fx:value="button-raised" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="modulehealth" alignment="CENTER" layoutX="212.0" layoutY="636.0" prefHeight="68.0" prefWidth="180.0" stylesheets="@stylehealth.css" text="Label">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="glowing-line-chart" />
+                        <String fx:value="button-raised" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="modulecurrent" alignment="CENTER" layoutX="20.0" layoutY="636.0" prefHeight="71.0" prefWidth="158.0" stylesheets="@stylehealth.css" text="label">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="glowing-line-chart" />
+                        <String fx:value="button-raised" />
+                     </styleClass>
+                  </Label>
+                  <Button layoutX="603.0" layoutY="636.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="306.0" styleClass="button-main" stylesheets="@stylehealth.css" text="Show Potential Malfunction">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
          </children>
       </Pane>
    </children>

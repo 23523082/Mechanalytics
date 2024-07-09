@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="HistoryPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLControllerHistory">
+<HBox fx:id="HistoryPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLControllerHistory">
    <children>
       <VBox prefHeight="720.0" prefWidth="360.0">
          <children>
@@ -128,9 +128,9 @@
       </VBox>
       <VBox prefHeight="720.0" prefWidth="920.0">
          <children>
-            <AnchorPane fx:id="TheHistory_Pane" prefHeight="420.0" prefWidth="1125.0" styleClass="top_pane" stylesheets="@Historystyle.css">
+            <AnchorPane fx:id="TheHistory_Pane" prefHeight="420.0" prefWidth="1125.0" styleClass="background-notif" stylesheets="@stylehealth.css">
                <children>
-                  <TableView fx:id="HistoryTableView" layoutX="10.0" layoutY="48.0" prefHeight="342.0" prefWidth="902.0" stylesheets="@Historystyle.css">
+                  <TableView fx:id="HistoryTableView" layoutX="10.0" layoutY="58.0" prefHeight="342.0" prefWidth="902.0" styleClass="text-label-white" stylesheets="@stylehealth.css">
                     <columns>
                       <TableColumn fx:id="date" prefWidth="132.800048828125" text="Date" />
                       <TableColumn fx:id="UserName" prefWidth="143.73336791992188" text="User Name" />
@@ -141,7 +141,7 @@
                         <TableColumn fx:id="Status" minWidth="0.0" prefWidth="85.59995117187498" text="Status" />
                     </columns>
                   </TableView>
-                  <TextField fx:id="history_search" layoutX="51.0" layoutY="14.0" prefHeight="26.0" prefWidth="314.0" promptText="search" />
+                  <TextField fx:id="history_search" layoutX="51.0" layoutY="14.0" prefHeight="26.0" prefWidth="314.0" promptText="search" styleClass="search" />
                   <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="26.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imageMenu/search.png" />
@@ -149,19 +149,25 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="314.0" prefWidth="920.0" styleClass="bottom_pane" stylesheets="@Historystyle.css">
+            <AnchorPane prefHeight="314.0" prefWidth="920.0" styleClass="background-top" stylesheets="@stylehealth.css">
                <children>
                   <TextField fx:id="TextDescription" alignment="TOP_LEFT" layoutX="35.0" layoutY="20.0" prefHeight="214.0" prefWidth="661.0" promptText="please insert description issue on machine">
                      <font>
                         <Font size="18.0" />
                      </font></TextField>
-                  <Button fx:id="DeleteNote_IssueMachine" layoutX="720.0" layoutY="14.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="180.0" text="delete" />
-                  <Button fx:id="SubmitNote_IssueMachine" layoutX="720.0" layoutY="105.0" mnemonicParsing="false" onAction="#submitMachineHistory" prefHeight="72.0" prefWidth="180.0" text="submit" />
+                  <Button fx:id="DeleteNote_IssueMachine" layoutX="720.0" layoutY="24.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="180.0" styleClass="button-history" stylesheets="@stylehealth.css" text="delete">
+                     <font>
+                        <Font name="Calibri Bold" size="26.0" />
+                     </font></Button>
+                  <Button fx:id="SubmitNote_IssueMachine" layoutX="720.0" layoutY="115.0" mnemonicParsing="false" onAction="#submitMachineHistory" prefHeight="72.0" prefWidth="180.0" styleClass="button-history" stylesheets="@stylehealth.css" text="submit">
+                     <font>
+                        <Font name="Calibri Bold" size="26.0" />
+                     </font></Button>
                   <TextField fx:id="Textdate" layoutX="35.0" layoutY="250.0" onAction="#submitMachineHistory" promptText="date" />
                   <TextField fx:id="TextSubmitter" layoutX="205.0" layoutY="250.0" onAction="#submitMachineHistory" promptText="Submitter" />
-                  <TextField fx:id="TextMachineBrand" layoutX="392.0" layoutY="250.0" onAction="#submitMachineHistory" promptText="Machine brand" />
-                  <TextField fx:id="TextIssueType" layoutX="579.0" layoutY="250.0" onAction="#submitMachineHistory" promptText="Issue Type" />
-                  <TextField fx:id="TextChooseMachine" layoutX="717.0" layoutY="186.0" onAction="#submitMachineHistory" promptText="Machine Name" />
+                  <TextField fx:id="TextMachineBrand" layoutX="370.0" layoutY="249.0" onAction="#submitMachineHistory" promptText="Machine brand" />
+                  <TextField fx:id="TextIssueType" layoutX="534.0" layoutY="249.0" onAction="#submitMachineHistory" promptText="Issue Type" />
+                  <TextField fx:id="TextChooseMachine" layoutX="696.0" layoutY="248.0" onAction="#submitMachineHistory" prefWidth="180.0" promptText="Machine Name" />
                </children>
             </AnchorPane>
          </children></VBox>
